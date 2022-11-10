@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="images/index.css">
+    <title>Score predictor</title>
+</head>
+<body>
+    <div><div class="img_wrap"><img src="images/logo.png" alt="This is cricket logo"></div>
+    <h3>Cricket Score Predictor</h3>
+    
+    <div class="wrapper">
+        <form action="/form" method="post">
+
+            <label for="ground">Select Ground</label>
+            <select name="app_ground" id="ground">
+                <option value="0">Brabourne Stadium</option>
+                <option value="1">Dubai International Cricket Stadium</option>
+                <option value="2">Eden Gardens</option>
+                <option value="3">Feroz Shah Kotla</option>
+                <option value="4">Himachal Pradesh Cricket Association Stadium</option>
+                <option value="5">JSCA International Stadium Complex</option>
+                <option value="6">Kingsmead</option>
+                <option value="7">M Chinnaswamy Stadium</option>
+                <option value="8">MA Chidambaram Stadium, Chepauk</option>
+                <option value="9">Punjab Cricket Association Stadium, Mohal</option>
+                <option value="10">Rajiv Gandhi International Stadium, Uppal</option>
+                <option value="11">Sardar Patel Stadium, Motera</option>
+                <option value="12">Sawai Mansingh Stadium</option>
+                <option value="13">Sharjah Cricket Stadium</option>
+                <option value="14">Sheikh Zayed Stadium</option>
+                <option value="15">St George's Park</option>
+                <option value="16">SuperSport Park</option>
+                <option value="17">Wankhede Stadium</option>
+            </select>
+
+            <label for="batting">Select Batting Team</label>
+            <select name="app_batting" id="batting">
+                <option value="0">Chennai Super Kings</option>
+                <option value="1">Delhi Daredevils</option>
+                <option value="2">Kings XI Punjab</option>
+                <option value="3">Kolkata Knight Riders</option>
+                <option value="4">Mumbai Indians</option>
+                <option value="5">Rajasthan Royals</option>
+                <option value="6">Royal Challengers Bangalore</option>
+                <option value="7">Sunrisers Hyderabad</option>
+            </select>
+
+            <label for="bowling">Select Bowling Team</label>
+            <select name="app_bowling" id="bowling">
+                <option value="0">Chennai Super Kings</option>
+                <option value="1">Delhi Daredevils</option>
+                <option value="2">Kings XI Punjab</option>
+                <option value="3">Kolkata Knight Riders</option>
+                <option value="4">Mumbai Indians</option>
+                <option value="5">Rajasthan Royals</option>
+                <option value="6">Royal Challengers Bangalore</option>
+                <option value="7" selected>Sunrisers Hyderabad</option>
+            </select>
+
+            <label for="runs">Runs scored</label>
+            <input type="number" name="app_runs" id="runs" value="50">
+
+            <label for="wickets">Wickets down</label>
+            <select name="app_wickets" id="wickets">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+
+            <label for="overs">Overs(5.1-20)</label>
+            <input type="number" name="app_overs" id="overs" step="0.1" value="5.1">
+
+            <label for="runslast">Runs scored in last 5 overs</label>
+            <input type="number" name="app_runslast" id="runslast" value="30">
+
+            <label for="wicketslast">Wickets fell in last 5 overs</label>
+            <select name="app_wicketslast" id="wicketslast">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+
+
+            <button type="submit">Predict</button>
+            
+        </form>
+    </div>
+
+    <div class="result">
+        {{content|safe}}
+    </div>
+    <h2 id="vd">Visualization of Dataset</h2>
+    <img class ="img" src="/images/ip1_img_1.png" alt="">
+    <br>
+    <img class ="img" src="/images/ip1_img_2.png" alt="">
+    <br>
+    <img class ="img" src="/images/ip1_img_3.png" alt="">
+    <br>
+    <img class ="img" src="/images/ip1_img_6.png" alt="">
+    <br>
+    <img class ="img" src="/images/ip1_img_4.png" alt="">
+    <br>
+    <img class ="img" src="/images/ip1_img_5.png" alt="">
+</body>
+</html>
